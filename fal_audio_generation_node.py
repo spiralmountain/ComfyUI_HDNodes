@@ -36,7 +36,7 @@ class FalAudioGeneration:
                 "seed": ("INT", {
                     "default": -1,
                     "min": -1,
-                    "max": 0xffffffffffffffff
+                    "max": 2147483647
                 }),
             },
         }
@@ -74,10 +74,13 @@ class FalAudioGeneration:
         # Set up Fal.ai credentials
         os.environ["FAL_KEY"] = fal_api_key
         
-        # Generate random seed if -1
+        # Generate random seed if -1, within Fal.ai's limit
         if seed == -1:
             import random
-            seed = random.randint(0, 0xffffffffffffffff)
+            seed = random.randint(0, 2147483647)
+        
+        # Ensure seed is within bounds
+        seed = min(seed, 2147483647)
         
         # Prepare payload based on model
         payload = {
@@ -95,6 +98,7 @@ class FalAudioGeneration:
             print(f"Generating audio with {model}...")
             print(f"Prompt: {prompt}")
             print(f"Duration: {duration}s")
+            print(f"Seed: {seed}")
             
             # Submit the job
             result = fal.subscribe(
