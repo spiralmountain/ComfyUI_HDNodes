@@ -7,19 +7,22 @@ from .seedance_image_to_video_node import NODE_CLASS_MAPPINGS as Seedance_MAPPIN
 from .download_video_node import NODE_CLASS_MAPPINGS as Download_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as Download_DISPLAY
 from .combine_video_audio_node import NODE_CLASS_MAPPINGS as Combine_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as Combine_DISPLAY
 from .fal_audio_generation_node import NODE_CLASS_MAPPINGS as FalAudio_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as FalAudio_DISPLAY
+from .preview_video_node import NODE_CLASS_MAPPINGS as PreviewVideo_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as PreviewVideo_DISPLAY
 
 NODE_CLASS_MAPPINGS = {}
 NODE_CLASS_MAPPINGS.update(Seedance_MAPPINGS)
 NODE_CLASS_MAPPINGS.update(Download_MAPPINGS)
 NODE_CLASS_MAPPINGS.update(Combine_MAPPINGS)
 NODE_CLASS_MAPPINGS.update(FalAudio_MAPPINGS)
+NODE_CLASS_MAPPINGS.update(PreviewVideo_MAPPINGS)
 
 NODE_DISPLAY_NAME_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS.update(Seedance_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(Download_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(Combine_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(FalAudio_DISPLAY)
+NODE_DISPLAY_NAME_MAPPINGS.update(PreviewVideo_DISPLAY)
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 __author__ = 'hdelmont'
