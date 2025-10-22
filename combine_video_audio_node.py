@@ -40,8 +40,7 @@ class CombineVideoAudio:
             }
         }
     
-    RETURN_TYPES = ("STRING",)
-    RETURN_NAMES = ("output_path",)
+    RETURN_TYPES = ()
     FUNCTION = "combine_video_audio"
     CATEGORY = "hdelmont/video"
     OUTPUT_NODE = True
@@ -135,7 +134,17 @@ class CombineVideoAudio:
             
             print(f"Video with audio saved to: {output_path}")
             
-            return (output_path,)
+            # Return UI format for ComfyUI to display in queue
+            return {
+                "ui": {
+                    "videos": [{
+                        "filename": output_filename,
+                        "subfolder": "",
+                        "type": "output",
+                        "format": "video/mp4"
+                    }]
+                }
+            }
             
         except subprocess.TimeoutExpired:
             raise ValueError("Video processing timed out (>5 minutes)")
