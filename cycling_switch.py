@@ -9,8 +9,8 @@ class CyclingSwitch:
     No external counter needed - just connects inputs and it cycles through them.
     """
 
-    def __init__(self):
-        self.counter = 0
+    # Use class variable so counter persists across instances
+    counter = 0
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -47,13 +47,13 @@ class CyclingSwitch:
         if not inputs:
             return ("",)
 
-        # Get current input
-        selected = inputs[self.counter % len(inputs)]
-        
-        # Increment counter for next run
-        self.counter += 1
+        # Get current input using class variable
+        selected = inputs[CyclingSwitch.counter % len(inputs)]
 
-        print(f"[CyclingSwitch] Selected input {(self.counter - 1) % len(inputs) + 1} of {len(inputs)}: {selected[:50]}...")
+        # Increment counter for next run
+        CyclingSwitch.counter += 1
+
+        print(f"[CyclingSwitch] Selected input {(CyclingSwitch.counter - 1) % len(inputs) + 1} of {len(inputs)}: {selected[:50]}...")
 
         return (selected,)
 
@@ -116,8 +116,8 @@ class CyclingSwitchAny:
     A switch that automatically cycles through ANY type inputs on each run.
     """
 
-    def __init__(self):
-        self.counter = 0
+    # Use class variable so counter persists across instances
+    counter = 0
 
     @classmethod
     def INPUT_TYPES(cls):
@@ -154,13 +154,13 @@ class CyclingSwitchAny:
         if not inputs:
             return (None,)
 
-        # Get current input
-        selected = inputs[self.counter % len(inputs)]
-        
-        # Increment counter for next run
-        self.counter += 1
+        # Get current input using class variable
+        selected = inputs[CyclingSwitchAny.counter % len(inputs)]
 
-        print(f"[CyclingSwitchAny] Selected input {(self.counter - 1) % len(inputs) + 1} of {len(inputs)}")
+        # Increment counter for next run
+        CyclingSwitchAny.counter += 1
+
+        print(f"[CyclingSwitchAny] Selected input {(CyclingSwitchAny.counter - 1) % len(inputs) + 1} of {len(inputs)}")
 
         return (selected,)
 
