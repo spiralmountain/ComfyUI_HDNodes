@@ -11,6 +11,8 @@ from .preview_video_node import NODE_CLASS_MAPPINGS as PreviewVideo_MAPPINGS, NO
 from .ollama_image_to_music_prompt_node import NODE_CLASS_MAPPINGS as OllamaImageToMusicPrompt_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as OllamaImageToMusicPrompt_DISPLAY
 from .stitch_videos_node import NODE_CLASS_MAPPINGS as StitchVideos_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as StitchVideos_DISPLAY
 from .openai_vision_qc_node import NODE_CLASS_MAPPINGS as OpenAIVisionQC_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as OpenAIVisionQC_DISPLAY
+from .flux_pro_ultra_manual_node import NODE_CLASS_MAPPINGS as FluxProUltra_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as FluxProUltra_DISPLAY
+from .flux_kontext_pro_manual_node import NODE_CLASS_MAPPINGS as FluxKontext_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as FluxKontext_DISPLAY
 
 NODE_CLASS_MAPPINGS = {}
 NODE_CLASS_MAPPINGS.update(Seedance_MAPPINGS)
@@ -21,6 +23,8 @@ NODE_CLASS_MAPPINGS.update(PreviewVideo_MAPPINGS)
 NODE_CLASS_MAPPINGS.update(OllamaImageToMusicPrompt_MAPPINGS)
 NODE_CLASS_MAPPINGS.update(StitchVideos_MAPPINGS)
 NODE_CLASS_MAPPINGS.update(OpenAIVisionQC_MAPPINGS)
+NODE_CLASS_MAPPINGS.update(FluxProUltra_MAPPINGS)
+NODE_CLASS_MAPPINGS.update(FluxKontext_MAPPINGS)
 
 NODE_DISPLAY_NAME_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS.update(Seedance_DISPLAY)
@@ -31,6 +35,8 @@ NODE_DISPLAY_NAME_MAPPINGS.update(PreviewVideo_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(OllamaImageToMusicPrompt_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(StitchVideos_DISPLAY)
 NODE_DISPLAY_NAME_MAPPINGS.update(OpenAIVisionQC_DISPLAY)
+NODE_DISPLAY_NAME_MAPPINGS.update(FluxProUltra_DISPLAY)
+NODE_DISPLAY_NAME_MAPPINGS.update(FluxKontext_DISPLAY)
 
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
 __version__ = "1.4.0"
