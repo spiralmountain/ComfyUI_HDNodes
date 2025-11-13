@@ -1,5 +1,6 @@
 import random
 import secrets
+import os
 
 
 class CyclingSwitch:
@@ -99,9 +100,11 @@ class RandomSwitch:
         if not inputs:
             return ("",)
 
-        # Use secrets for true randomness (no seed needed)
-        selected = secrets.choice(inputs)
-        selected_idx = inputs.index(selected)
+        # Use os.urandom for true randomness from system (no seed needed)
+        random_bytes = os.urandom(4)
+        random_int = int.from_bytes(random_bytes, 'big')
+        selected_idx = random_int % len(inputs)
+        selected = inputs[selected_idx]
 
         print(f"[RandomSwitch] Randomly selected input {selected_idx + 1} of {len(inputs)}: {selected[:50]}...")
 
@@ -203,9 +206,11 @@ class RandomSwitchAny:
         if not inputs:
             return (None,)
 
-        # Use secrets for true randomness (no seed needed)
-        selected = secrets.choice(inputs)
-        selected_idx = inputs.index(selected)
+        # Use os.urandom for true randomness from system (no seed needed)
+        random_bytes = os.urandom(4)
+        random_int = int.from_bytes(random_bytes, 'big')
+        selected_idx = random_int % len(inputs)
+        selected = inputs[selected_idx]
 
         print(f"[RandomSwitchAny] Randomly selected input {selected_idx + 1} of {len(inputs)}")
 
