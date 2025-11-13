@@ -31,7 +31,7 @@ class CyclingSwitch:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("output",)
     FUNCTION = "switch"
-    CATEGORY = "hdelmont/utils"
+    CATEGORY = "spiralmountain/utils"
 
     def switch(self, input1=None, input2=None, input3=None, input4=None, input5=None,
                input6=None, input7=None, input8=None, input9=None, input10=None):
@@ -84,7 +84,7 @@ class RandomSwitch:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("output",)
     FUNCTION = "switch"
-    CATEGORY = "hdelmont/utils"
+    CATEGORY = "spiralmountain/utils"
 
     def switch(self, input1=None, input2=None, input3=None, input4=None, input5=None,
                input6=None, input7=None, input8=None, input9=None, input10=None):
@@ -136,7 +136,7 @@ class CyclingSwitchAny:
     RETURN_TYPES = ("*",)
     RETURN_NAMES = ("output",)
     FUNCTION = "switch"
-    CATEGORY = "hdelmont/utils"
+    CATEGORY = "spiralmountain/utils"
 
     def switch(self, input1=None, input2=None, input3=None, input4=None, input5=None,
                input6=None, input7=None, input8=None, input9=None, input10=None):
@@ -188,7 +188,7 @@ class RandomSwitchAny:
     RETURN_TYPES = ("*",)
     RETURN_NAMES = ("output",)
     FUNCTION = "switch"
-    CATEGORY = "hdelmont/utils"
+    CATEGORY = "spiralmountain/utils"
 
     def switch(self, input1=None, input2=None, input3=None, input4=None, input5=None,
                input6=None, input7=None, input8=None, input9=None, input10=None):
@@ -213,26 +213,15 @@ class RandomSwitchAny:
 
 
 NODE_CLASS_MAPPINGS = {
-    # New names with prefix
-    "LuxuryPresence_CyclingSwitch": CyclingSwitch,
-    "LuxuryPresence_RandomSwitch": RandomSwitch,
-    "LuxuryPresence_CyclingSwitchAny": CyclingSwitchAny,
-    "LuxuryPresence_RandomSwitchAny": RandomSwitchAny,
-    # Legacy names for backward compatibility
-    "CyclingSwitch": CyclingSwitch,
-    "RandomSwitch": RandomSwitch,
-    "CyclingSwitchAny": CyclingSwitchAny,
-    "RandomSwitchAny": RandomSwitchAny
+    "spiralmountain_cyclingswitch": CyclingSwitch,
+    "spiralmountain_randomswitch": RandomSwitch,
+    "spiralmountain_cyclingswitchany": CyclingSwitchAny,
+    "spiralmountain_randomswitchany": RandomSwitchAny
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "LuxuryPresence_CyclingSwitch": "Cycling Switch 🔄",
-    "LuxuryPresence_RandomSwitch": "Random Switch 🎲",
-    "LuxuryPresence_CyclingSwitchAny": "Cycling Switch (Any) 🔄",
-    "LuxuryPresence_RandomSwitchAny": "Random Switch (Any) 🎲",
-    # Legacy names
-    "CyclingSwitch": "Cycling Switch 🔄",
-    "RandomSwitch": "Random Switch 🎲",
-    "CyclingSwitchAny": "Cycling Switch (Any) 🔄",
-    "RandomSwitchAny": "Random Switch (Any) 🎲"
+    "spiralmountain_cyclingswitch": "🌀 SpiralMountain Cycling Switch",
+    "spiralmountain_randomswitch": "🌀 SpiralMountain Random Switch",
+    "spiralmountain_cyclingswitchany": "🌀 SpiralMountain Cycling Switch (Any)",
+    "spiralmountain_randomswitchany": "🌀 SpiralMountain Random Switch (Any)"
 }
