@@ -87,6 +87,11 @@ class RandomSwitch:
     FUNCTION = "switch"
     CATEGORY = "spiralmountain/utils"
 
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        # Always return a different value to force re-execution every time
+        return float("nan")
+
     def switch(self, input1=None, input2=None, input3=None, input4=None, input5=None,
                input6=None, input7=None, input8=None, input9=None, input10=None):
         """Randomly select from connected inputs using secure randomness"""
@@ -192,6 +197,11 @@ class RandomSwitchAny:
     RETURN_NAMES = ("output",)
     FUNCTION = "switch"
     CATEGORY = "spiralmountain/utils"
+
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        # Always return a different value to force re-execution every time
+        return float("nan")
 
     def switch(self, input1=None, input2=None, input3=None, input4=None, input5=None,
                input6=None, input7=None, input8=None, input9=None, input10=None):
