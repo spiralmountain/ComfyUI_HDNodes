@@ -74,7 +74,7 @@ If no issues exist at all, output: "No corrections needed" """}),
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("qc_analysis",)
     FUNCTION = "analyze_image_qc"
-    CATEGORY = "HD Custom Nodes/vision"
+    CATEGORY = "spiralmountain/vision"
 
     def analyze_image_qc(self, image, postTitle, postContent, brandProfile, prompt, model, api_key=""):
         """Process the image with OpenAI's Vision API for QC with article context"""
@@ -164,9 +164,9 @@ If no issues exist at all, output: "No corrections needed" """}),
 
 # Node registration
 NODE_CLASS_MAPPINGS = {
-    "LuxuryPresence_OpenAIVisionQC": OpenAIVisionQC
+    "spiralmountain_openaivisionqc": OpenAIVisionQC
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "LuxuryPresence_OpenAIVisionQC": "🔮 OpenAI Vision QC (with Article Context)"
+    "spiralmountain_openaivisionqc": "🔮 SpiralMountain OpenAI Vision QC"
 }
